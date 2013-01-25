@@ -89,14 +89,17 @@ int main(int argc,char** argv)
       return -1;
   }  
 
-  if((8 == argc) && (stricmp(argv[7], "/manage")))
+  if(8 == argc) 
   {
-      printf("Invalid command line parameter(s)"); 
-      return -1;
-  } 
-  else
-  {
-      ro = FALSE;
+     if(stricmp(argv[7], "/manage"))
+     {
+        printf("Invalid command line parameter(s)"); 
+        return -1;
+     } 
+     else
+     {
+        ro = FALSE;
+     }
   }
     
 
